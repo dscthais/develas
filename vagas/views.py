@@ -32,3 +32,20 @@ def detalhe(request, vaga_id):
         if vaga["id"] == vaga_id:
             return render(request, "vagas/detalhe.html", {"vaga": vaga})
     raise Http404("Vaga não encontrada")
+
+
+def sobre(request):
+    empresas = []
+    for vaga in VAGAS:
+        if vaga["empresa"] not in empresas:
+            empresas.append(vaga["empresa"])
+
+    contexto = {
+        "total": len(VAGAS),
+        "empresas": len(empresas),
+    }
+    return render(request, "vagas/sobre.html", contexto)
+
+
+def contato(request):
+    return render(request, "vagas/contato.html")
