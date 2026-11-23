@@ -1,8 +1,8 @@
 /* Cores e estilos da DevElas: tudo num lugar só */
 
 :root {
-  --cor-principal: #6C3FC5;
-  --cor-destaque: #F07A4E;
+  --cor-principal: #a657e7;
+  --cor-destaque: #9d2599;
 }
 
 .bg-develas, .badge-develas { background-color: var(--cor-principal); }
